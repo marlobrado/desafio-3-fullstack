@@ -8,6 +8,7 @@ import {
     OneToMany,
     JoinColumn,
 } from "typeorm";
+import { Contact } from "./contact.entity";
 
 @Entity("users")
 class User {
@@ -31,6 +32,9 @@ class User {
 
     @UpdateDateColumn()
     updatedAt: Date;
+
+    @OneToMany(()=> Contact, contact => contact.user )
+    contacts: Contact[]
 }
 export default User
 

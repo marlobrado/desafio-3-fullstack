@@ -24,10 +24,10 @@ const listUsersController = async(req: Request, res: Response) => {
 
 const updateUserController = async (req: Request, res: Response)=>{
     
-        const user: IUserUpdate = req.body
-        const id: string = req.params.id
-        const updatedUser = await updateUserService(user, id)
-        return res.json(updatedUser)
+    const user: IUserUpdate = req.body
+    const id: string = req.params.id
+    const updatedUser = await updateUserService(user, id)
+    return res.json(updatedUser)
 }
 
 const deleteUserController = async (req: Request, res: Response)=>{

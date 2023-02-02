@@ -7,6 +7,7 @@ import {
     ManyToOne,
     JoinColumn,
 } from "typeorm";
+import User from "./user.entity";
 
 @Entity("contacts")
 export class Contact {
@@ -27,5 +28,8 @@ export class Contact {
 
     @UpdateDateColumn()
     updatedAt: Date;
+
+    @ManyToOne(()=> User)
+    user: User
 
 }
