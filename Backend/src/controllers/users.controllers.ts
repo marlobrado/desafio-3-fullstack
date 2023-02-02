@@ -12,7 +12,7 @@ const createUserControler = async (req: Request, res: Response) =>{
     
     const user:IUserRequest = req.body
     const createdUser = await createUserService(user)
-    return res.status(201).json(createdUser)
+    return res.status(201).json(instanceToPlain(createdUser))
 
 }
 

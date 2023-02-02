@@ -8,7 +8,7 @@ const deleteContactsService = async (id: string) => {
     const findContact = await contactRepository.findOneBy({id: id})
     
     if(!findContact){
-        throw new AppError('user not found', 404)
+        throw new AppError('Contact not found', 404)
     }
 
     await contactRepository.delete(id);

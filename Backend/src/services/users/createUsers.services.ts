@@ -16,7 +16,7 @@ const createUserService = async ({
     const emailVerify = await userRepository.findOneBy({ email });
 
     if (emailVerify) {
-        throw new AppError('Email already exists', 400)
+        throw new AppError('Email already exists', 409)
     }
 
     if (!password) {
