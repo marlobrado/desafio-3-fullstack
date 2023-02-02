@@ -6,7 +6,7 @@ import { IUserUpdate } from "../../interfaces/users.interfaces";
 
 
 
-const updateUserService = async ({ email, password,fullName, telphone}: IUserUpdate, id: string): Promise<User | Array<string | number>>=>{
+const updateUserService = async ({ email, password,fullName, telephone}: IUserUpdate, id: string): Promise<User | Array<string | number>>=>{
     const userRepository = AppDataSource.getRepository(User)
 
     const findUser = await userRepository.findOneBy({id})
@@ -20,7 +20,7 @@ const updateUserService = async ({ email, password,fullName, telphone}: IUserUpd
         {
             fullName: fullName ? fullName : findUser.fullName,
             email: email ? email : findUser.email,
-            telphone: telphone ? telphone : findUser.telphone,
+            telephone: telephone ? telephone : findUser.telephone,
             password: password ? await hash(password, 10) : findUser.password
         }
     )

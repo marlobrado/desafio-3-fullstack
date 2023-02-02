@@ -21,7 +21,7 @@ class User {
     email: string;
 
     @Column()
-    telphone: string;
+    telephone: string;
 
     @Column({ length: 120 })
     @Exclude()
@@ -33,7 +33,7 @@ class User {
     @UpdateDateColumn()
     updatedAt: Date;
 
-    @OneToMany(()=> Contact, contact => contact.user )
+    @OneToMany(()=> Contact, contact => contact.user, { eager: true } )
     contacts: Contact[]
 }
 export default User

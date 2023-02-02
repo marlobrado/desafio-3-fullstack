@@ -5,7 +5,7 @@ const listUsersService = async (): Promise<User[]> =>{
     
     const userRepository =  AppDataSource.getRepository(User)
 
-    const users = await userRepository.find()
+    const users = await userRepository.find({ relations: { contacts: true } })
 
     return users
 
