@@ -1,6 +1,7 @@
 import { hash } from "bcrypt";
 import AppDataSource from "../../data-source";
 import User from "../../entities/user.entity";
+import { AppError } from "../../errors/appError";
 
 import { IUserRequest, IUserResponse } from "../../interfaces/users.interfaces";
 
@@ -15,11 +16,11 @@ const createUserService = async ({
     const emailVerify = await userRepository.findOneBy({ email });
 
     if (emailVerify) {
-        throw new Error("Email already exists");
+        throw new AppError('Email already exists', 400)
     }
 
     if (!password) {
-        throw new Error("Password is missign");
+        throw new AppError('Password is missing');
     }
     const hashedPassword = await hash(password, 10);
 

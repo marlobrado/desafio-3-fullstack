@@ -1,6 +1,7 @@
 import { hash } from "bcrypt";
 import AppDataSource from "../../data-source";
 import User from "../../entities/user.entity";
+import { AppError } from "../../errors/appError";
 import { IUserUpdate } from "../../interfaces/users.interfaces";
 
 
@@ -10,7 +11,8 @@ const updateUserService = async ({ email, password,fullName, telphone}: IUserUpd
 
     const findUser = await userRepository.findOneBy({id})
     if(!findUser){
-        return ["user not found", 404]
+        throw new AppError('user not found', 404)
+
     }
 
     await userRepository.update(
