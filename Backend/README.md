@@ -34,7 +34,7 @@ http://localhost:3050
 
 Diagrama ER da API definindo bem as relações entre as tabelas do banco de dados.
 
-![DER](DER_SP7_01.drawio.png)
+![DER](DERMANAGECONTACTS.png)
 
 ---
 

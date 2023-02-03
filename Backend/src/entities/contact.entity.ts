@@ -14,7 +14,7 @@ export class Contact {
     @PrimaryGeneratedColumn("uuid")
     readonly id: string;
 
-    @Column({ length: 60 })
+    @Column({ length: 100 })
     name: string;
 
     @Column({ length: 60 })
