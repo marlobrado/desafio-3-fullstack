@@ -20,7 +20,7 @@ export class Contact {
     @Column({ length: 60 })
     email: string;
 
-    @Column({ length: 14 })
+    @Column({ length: 20 })
     telephone: string;
 
     @CreateDateColumn()

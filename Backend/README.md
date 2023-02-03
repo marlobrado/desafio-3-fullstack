@@ -24,7 +24,7 @@ Visão geral do projeto, um pouco das tecnologias usadas.
 - [TypeORM](https://typeorm.io/)
 
 A URL base da aplicação:
-http://localhost:3000
+http://localhost:3050
 
 ---
 
@@ -134,7 +134,7 @@ O objeto User é definido como:
 ### Exemplo de Request:
 ```
 POST /users
-Host: http://localhost:3000
+Host: http://localhost:3050
 Authorization: None
 Content-type: application/json
 ```
@@ -180,7 +180,7 @@ Content-type: application/json
 ### Exemplo de Request:
 ```
 POST /users
-Host: http://localhost:3000
+Host: http://localhost:3050
 Authorization: None
 Content-type: application/json
 ```
@@ -220,7 +220,7 @@ Content-type: application/json
 ### Exemplo de Request:
 ```
 GET /users
-Host: http://localhost:3000
+Host: http://localhost:3050
 Authorization: Barear token
 Content-type: application/json
 ```
@@ -259,7 +259,7 @@ Nenhum, o máximo que pode acontecer é retornar uma lista vazia.
 ### Exemplo de Request:
 ```
 GET /users/user
-Host: http://localhost:3000
+Host: http://localhost:3050
 Authorization: Barear token
 Content-type: application/json
 ```
@@ -308,7 +308,7 @@ Vazio
 ### Exemplo de Request:
 ```
 GET /users/48912294-dfd8-40b5-a1c7-670344e127f7
-Host: http://localhost:3000
+Host: http://localhost:3050
 Authorization: Barear token
 Content-type: application/json
 ```
@@ -363,7 +363,7 @@ Usuário deve estar logado e passar o token no no Header, só é possivel atuali
 ### Exemplo de Request:
 ```
 GET /users/48912294-dfd8-40b5-a1c7-670344e127f7
-Host: http://localhost:3000
+Host: http://localhost:3050
 Authorization: Barear token
 Content-type: application/json
 ```
@@ -430,7 +430,7 @@ user_id | string | FK
 ### Exemplo de Request:
 ```
 POST /contacts
-Host: http://localhost:3000
+Host: http://localhost:3050
 Authorization: Barear token
 Content-type: application/json
 ```
@@ -479,7 +479,7 @@ O usuário deve estar logado para criar um contato
 ### Exemplo de Request:
 ```
 POST /contacts
-Host: http://localhost:3000
+Host: http://localhost:3050
 Authorization: Barear token
 Content-type: application/json
 ```
@@ -523,7 +523,7 @@ vazio
 ### Exemplo de Request:
 ```
 POST /contacts/8ba4059c-c9b7-4a51-b9ed-a46c5aa3152b
-Host: http://localhost:3000
+Host: http://localhost:3050
 Authorization: Barear token
 Content-type: application/json
 ```
@@ -579,7 +579,7 @@ O usuário deve estar logado para atualizar os seus contatos criados, e só pode
 ### Exemplo de Request:
 ```
 POST /contacts/8ba4059c-c9b7-4a51-b9ed-a46c5aa3152b
-Host: http://localhost:3000
+Host: http://localhost:3050
 Authorization: Barear token
 Content-type: application/json
 ```
