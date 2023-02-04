@@ -16,12 +16,8 @@ app.use("/contacts", contactRouter)
 
 app.use(handleErrorMiddleware)
 
-app.listen(3050, () =>{
-    console.log('Server running in port 3050')
-})
-
-
-
-
+// app.listen(3050, () =>{
+//     console.log('Server running in port 3050')
+// })
 
 export default app

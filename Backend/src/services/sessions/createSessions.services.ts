@@ -8,7 +8,7 @@ import { AppError } from "../../errors/appError";
 const createSessionService = async ({
     email,
     password,
-}: ISessionRequest): Promise<string> => {
+}: ISessionRequest): Promise<any> => {
     const userRepository = AppDataSource.getRepository(User);
 
     const user = await userRepository.findOneBy({ email: email });
@@ -36,6 +36,12 @@ const createSessionService = async ({
         }
     );
 
-    return token;
+    const obj = {
+        token, user
+    }
+
+    // return token;
+    return obj;
+
 };
 export default createSessionService;
