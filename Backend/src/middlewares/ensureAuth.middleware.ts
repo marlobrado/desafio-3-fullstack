@@ -3,7 +3,7 @@ import jwt from 'jsonwebtoken'
 import 'dotenv/config'
 
 const ensureAuthMiddleware = async(req: Request, res: Response, next: NextFunction) => {
-
+    
     let token = req.headers.authorization
 
     if(!token){

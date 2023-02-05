@@ -200,7 +200,16 @@ Content-type: application/json
 
 ```json
 {
-	"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImZlcm5hbmRvQGtlbnppZS5jb20iLCJpYXQiOjE2NzUzNzc1NTIsImV4cCI6MTY3NTYzNjc1Miwic3ViIjoiNDg5MTIyOTQtZGZkOC00MGI1LWExYzctNjcwMzQ0ZTEyN2Y3In0.YXuGOGoMATHeB6xi_OMwNOOO4tVYFWi_H6BjZRt-KdY"
+	"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImZlcm5hbmRvQGtlbnppZS5jb20iLCJpYXQiOjE2NzU1MzUyMzUsImV4cCI6MTY3NTc5NDQzNSwic3ViIjoiYTE0NTQ5ZDYtNGE5Ny00MTliLWE0NjItZGNkZWJlNGVhZWU4In0.2FlrNf8AgQVA04AY_1ARpfohvfgZDaDmxtx7okAhKHY",
+	"user": {
+		"id": "a14549d6-4a97-419b-a462-dcdebe4eaee8",
+		"fullName": "Fernando Henrique",
+		"email": "fernando@kenzie.com",
+		"telephone": "62984562147",
+		"createdAt": "2023-02-04T18:27:13.123Z",
+		"updatedAt": "2023-02-04T18:27:13.123Z",
+		"contacts": []
+	}
 }
 ```
 

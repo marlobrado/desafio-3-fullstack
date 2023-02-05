@@ -6,8 +6,7 @@ const isValidUUIDMiddleware = async(req: Request, res: Response, next:NextFuncti
     if(id.length !== 36){
         throw new AppError('Invalid UUID, must be 36 characters', 400)
     }
-    console.log("ALIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII")
-    console.log(id.length)
+    
     return next()
 }
 
