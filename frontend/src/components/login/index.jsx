@@ -45,7 +45,7 @@ const Login = () => {
         
         api.post('/login', data)
         .then((res) => {
-            // console.log(res.data)
+            
             const { token} = res.data
             const { id } = res.data.user
 

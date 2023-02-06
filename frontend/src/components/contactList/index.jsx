@@ -35,10 +35,10 @@ const ContactList = ({ contact }) => {
         <>
             
             <ContainerLi>
-                <div>
-                    <p>{`Nome: ${contact.name}`}</p>
-                    <p>{`Telefone: ${contact.telephone}`}</p>
-                    <p>{`Email: ${contact.email}`}</p>
+                <div className="div-paragraph">
+                    <p className="contact-list">{`Nome: ${contact.name}`}</p>
+                    <p className="contact-list">{`Telefone: ${contact.telephone}`}</p>
+                    <p className="contact-list">{`Email: ${contact.email}`}</p>
                 </div>
                 <div>
                     <button onClick={handleClick} id={contact.id}>

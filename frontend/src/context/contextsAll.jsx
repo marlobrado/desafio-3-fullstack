@@ -5,16 +5,16 @@ export const ContextsAll = createContext({});
 const ContextsProvider = ({ children }) => {
     const [userData, setUserData] = useState({});
     const [userContacts, setUserContacts] = useState([]);
-    const [ isModalOn, setIsModalOn ] = useState(false)
+    const [ isModalAddOn, setIsModalAddOn ] = useState(false)
 
 
     function handleClickAddModal(){
-        setIsModalOn(!isModalOn)
+        setIsModalAddOn(!isModalAddOn)
     }
 
     return (
         <ContextsAll.Provider
-            value={{ userData, setUserData, userContacts, setUserContacts, handleClickAddModal }}
+            value={{ userData, setUserData, userContacts, setUserContacts, handleClickAddModal, isModalAddOn }}
         >
             {children}
         </ContextsAll.Provider>

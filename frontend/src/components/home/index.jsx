@@ -1,14 +1,16 @@
 import { useContext, useEffect } from "react";
 import { ContextsAll } from "../../context/contextsAll";
 // import Plus from "../../../img/Plus.png";
-import Plus from "../../img/Plus.png"
+import Plus from "../../img/Plus.png";
 import api from "../../services/api";
+import AddModal from "../AddModal";
+
 import ContactList from "../contactList";
 import { ContactsAdd } from "./styles";
 
-
 const Home = () => {
-    const { userContacts, setUserContacts, userData, handleClickAddModal } = useContext(ContextsAll);
+    const { userContacts, setUserContacts, handleClickAddModal, isModalAddOn, userData } =
+        useContext(ContextsAll);
 
     useEffect(() => {
         async function loadData() {
@@ -30,30 +32,30 @@ const Home = () => {
         loadData();
     }, [setUserContacts]);
 
-    console.log("contatos", userContacts);
-    console.log("dados", userData);
+    console.log(userData)
     return (
-        <div>
-            <ContactsAdd>
-                <h4>Adicionar contato</h4>
-                <button className="homeAdd" onClick={handleClickAddModal}>
-                    <img src={Plus} alt="Adicionar" />
-                </button>
-            </ContactsAdd>
-            <ul>
-                {userContacts.map((contact) => {
-                    return (
-                        // <li key={contact.id}>
-                        //     <p>{`Nome: ${contact.name}`}</p>
-                        //     <p>{ `Telefone: ${contact.telephone}`}</p>
-                        //     <p>{`Email: ${contact.email}`}</p>
-                        // </li>
-                        <ContactList key={contact.id} contact={contact}/>
-                        // <TechLi key={contact.id} contact={contact}/>
-                    );
-                })}
-            </ul>
-        </div>
+        <>
+            <div>
+                <div>
+                    <p>Olá {userData.fullName}</p>
+                </div>
+                <ContactsAdd>
+                    <h4>Adicionar contato</h4>
+                    <button className="homeAdd" onClick={handleClickAddModal}>
+                        <img src={Plus} alt="Adicionar" />
+                    </button>
+                </ContactsAdd>
+                <ul>
+                    {userContacts.map((contact) => {
+                        return (
+                            <ContactList key={contact.id} contact={contact} />
+                        );
+                    })}
+                </ul>
+            </div>
+            {isModalAddOn && <AddModal />}
+            {/* <AddModal/> */}
+        </>
     );
 };
 export default Home;
