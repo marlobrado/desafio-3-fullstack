@@ -23,6 +23,7 @@ const ContactList = ({ contact }) => {
                     )
                 );
 
+                
                 console.log("Deletado com sucesso");
             })
             .catch(() => {
